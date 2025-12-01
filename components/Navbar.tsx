@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Link from "next/link";
 import { Menu, X, Github, Mail } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { portfolioData } from "@/data/portfolio";
@@ -18,11 +19,11 @@ export default function Navbar() {
     }, []);
 
     const navLinks = [
-        { name: "About", href: "/#about" },
-        { name: "Skills", href: "/#skills" },
-        { name: "Projects", href: "/#projects" },
-        { name: "Education", href: "/#education" },
-        { name: "Contact", href: "/contact" },
+        { name: "About", href: "#about" },
+        { name: "Skills", href: "#skills" },
+        { name: "Projects", href: "#projects" },
+        { name: "Education", href: "#education" },
+        { name: "Contact", href: "#contact" },
     ];
 
     return (
@@ -35,23 +36,23 @@ export default function Navbar() {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex items-center justify-between h-16">
                     <div className="flex-shrink-0">
-                        <a
+                        <Link
                             href="/"
                             className="text-xl font-bold bg-gradient-to-r from-blue-400 to-cyan-300 bg-clip-text text-transparent"
                         >
                             MSJ
-                        </a>
+                        </Link>
                     </div>
                     <div className="hidden md:block">
                         <div className="ml-10 flex items-baseline space-x-8">
                             {navLinks.map((link) => (
-                                <a
+                                <Link
                                     key={link.name}
                                     href={link.href}
                                     className="text-slate-300 hover:text-white hover:bg-slate-800 px-3 py-2 rounded-md text-sm font-medium transition-colors"
                                 >
                                     {link.name}
-                                </a>
+                                </Link>
                             ))}
                         </div>
                     </div>
@@ -92,14 +93,14 @@ export default function Navbar() {
                     >
                         <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
                             {navLinks.map((link) => (
-                                <a
+                                <Link
                                     key={link.name}
                                     href={link.href}
                                     onClick={() => setIsOpen(false)}
                                     className="text-slate-300 hover:text-white hover:bg-slate-800 block px-3 py-2 rounded-md text-base font-medium"
                                 >
                                     {link.name}
-                                </a>
+                                </Link>
                             ))}
                         </div>
                     </motion.div>
