@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Mail, Phone, MapPin, Github, Send } from "lucide-react";
+import { Mail, MapPin, Github, Send } from "lucide-react";
 import { portfolioData } from "@/data/portfolio";
 
 export default function Contact() {
@@ -40,11 +40,11 @@ export default function Contact() {
                                 </div>
                                 <div className="flex items-start space-x-4">
                                     <div className="p-3 bg-blue-500/10 rounded-lg text-blue-400">
-                                        <Phone size={24} />
+                                        <MapPin size={24} />
                                     </div>
                                     <div>
-                                        <p className="text-sm text-slate-400 mb-1">Phone</p>
-                                        <p className="text-white">{portfolioData.personalInfo.phone}</p>
+                                        <p className="text-sm text-slate-400 mb-1">Location</p>
+                                        <p className="text-white">New Delhi, India</p>
                                     </div>
                                 </div>
                                 <div className="flex items-start space-x-4">
@@ -91,18 +91,7 @@ export default function Contact() {
                                 />
                             </div>
 
-                            <div>
-                                <label htmlFor="phone" className="block text-sm font-medium text-slate-300 mb-2">
-                                    Phone
-                                </label>
-                                <input
-                                    type="tel"
-                                    id="phone"
-                                    name="phone"
-                                    placeholder="+91 98765 43210"
-                                    className="w-full px-4 py-3 bg-slate-900 border border-slate-700 rounded-lg text-white placeholder-slate-500 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-colors"
-                                />
-                            </div>
+
 
                             <div>
                                 <label htmlFor="message" className="block text-sm font-medium text-slate-300 mb-2">
