@@ -2,7 +2,7 @@ export const portfolioData = {
     personalInfo: {
         name: "Muhammad Suhail Jalal",
         phone: "+91 7303514050",
-        email: "suhailjalal2005@gmail.com",
+        email: "example@email.com",
         github: "https://github.com/MSuhail7860",
         role: "Aspiring Software Engineer",
         location: "New Delhi, India",
